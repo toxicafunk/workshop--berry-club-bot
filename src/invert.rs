@@ -63,7 +63,8 @@ pub fn internal_invert_rect(
         let line = &board[i as usize];
         for j in left..left + width {
             let color = line[j as usize];
-            let new_color = 0xfffffff - color;
+            let white = 0xffffffu32;
+            let new_color = white - color as u32;
 
             let pixel = SetPixelRequest {
                 x: j,

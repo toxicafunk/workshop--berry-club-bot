@@ -41,7 +41,7 @@ pub(crate) fn internal_render_circle(
         for j in std::cmp::max(0, center_x - radius as i32)
             ..=std::cmp::min(BOARD_WIDTH as i32 - 1, center_x + radius as i32)
         {
-            let dx = i - center_x;
+            let dx = i - center_y;
             let dy = j - center_x;
             let d2 = dx * dx + dy * dy;
             if d2 >= r2 - max_delta && d2 <= r2 + max_delta {

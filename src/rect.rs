@@ -52,8 +52,8 @@ pub(crate) fn internal_render_rect(
     let mut pixels = vec![];
 
     // Iterate over pixels of the rectangle.
-    for i in top..top + width {
-        for j in left..left + height {
+    for i in left..left + width {
+        for j in top..top + height {
             let pixel = SetPixelRequest { x: i, y: j, color };
             // Verify that the pixel request is valid.
             // NOTE: That this check is not necessary, because we've verified the input above.
